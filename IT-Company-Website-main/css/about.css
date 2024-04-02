@@ -74,7 +74,7 @@ body{
 .home{
     min-height: 70vh;
     width: 100vw;
-    background-image: url(../images/img3.jpg);
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.5)), url(../images/about.jpg);
     background-size: cover;
     display: flex;
     align-items: center;
@@ -130,154 +130,15 @@ body{
     transform: rotate(180deg);
 }
 
-.career
-		{
-			width: 80%;
-			height: auto;
-			margin: 5rem auto 5rem auto;
-			display: flex;
-			flex-wrap: wrap;
-			padding: 10px;
-			border-radius: 10px;
-			background: #fff;
-			box-shadow: 0px 0px 10px 0px #666;
-		}
-		.career-form
-		{
-            margin-top: .5rem;
-			width: 100%;
-			height: auto;
-			flex: 50%;
-			text-align: left;
-		}
-		.career-form-txt, .career-form-experience
-		{
-            margin-left: 2rem;
-			width: 96.5%;
-			height: 40px;
-			color: #000;
-			border: 1px solid #bcbcbc;
-			border-radius: 50px;
-			outline: none;
-			margin-bottom: 20px;
-			padding: 15px;
-            font-size: 1.5rem;
-		}
-        .career-form-email
-		{
-            margin-left: 2rem;
-			width: 96.5%;
-			height: 40px;
-			color: #000;
-			border: 1px solid #bcbcbc;
-			border-radius: 50px;
-			outline: none;
-			margin-bottom: 20px;
-			padding: 15px;
-            font-size: 1.5rem;
-		}
-		.career-form-txt::placeholder, .career-form-experience::placeholder
-		{
-			color: #aaa;
-            font-size: 1.5rem;
-		}
-        .career-form-email::placeholder
-		{
-			color: #aaa;
-            font-size: 1.5rem;
-		}
-        .radio-class
-		{
-            margin-left: 1rem;
-			width: 110%;
-            margin-top: -2rem;
-			height: 40px;
-			color: #000;
-			margin-bottom: 5rem;
-			padding: 15px;
-		}
-        .radio
-        {
-            margin-top: .75rem;
-            font-size: 1.5rem;
-            margin-right: 9.5rem;
-        }
-		.career-form-txtarea
-		{
-            margin-left: 2rem;
-			width: 96.5%;
-			height: 130px;
-			color: #000;
-			border: 1px solid #bcbcbc;
-			border-radius: 10px;
-			outline: none;
-			margin-bottom: 20px;
-			padding: 15px;
-			font-family: 'Poppins', sans-serif;
-            font-size: 1.5rem;
-		}
-		.career-form-txtarea::placeholder
-		{
-			color: #aaa;
-            font-size: 1.5rem;
-		}
-        .file   
-		{
-            margin-left: 1rem;
-			width: 100%;
-            margin-top: -2.5rem;
-			height: 40px;
-			color: #000;
-			margin-bottom: 5rem;
-			padding: 15px;
-		}
-        .upload
-        {
-            margin-top: .75rem;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-		.career-form-btn
-		{
-            margin-left: 2rem;
-            outline: none;
-            border: none;
-            border-radius: 5rem;
-            background: white;
-            border-style: groove;
-            border-color: #002e5f;
-            font-size: 1.5rem;
-            cursor: pointer;
-            height: 3.5rem;
-            margin-top: 1rem;
-            margin-bottom: .5rem;
-            width: 15rem;
-            box-shadow: 0 .2rem .5rem rgba(0,0,0,.3);
-		}
-        .career-form-btn:hover{
-            letter-spacing: .1rem;
-            opacity: .9;
-            color: white;
-            background: #002e5f;
-        }
-		.career-form-phone
-		{
-            margin-left: 2rem;
-			width: 96.5%;
-			height: 40px;
-			color: #000;
-			border: 1px solid #bcbcbc;
-			border-radius: 50px;
-			outline: none;
-			margin-bottom: 20px;
-			padding: 15px;
-            font-size: 1.5rem;
-		}
-		.career-form-phone::placeholder
-		{
-			color: #aaa;
-            font-size: 1.5rem;
-		}
+
+
+
+
+
+
+
+
+
 
 .footer {
     position: relative;
@@ -450,8 +311,8 @@ body{
     }
 
     .header .logo img{
-        width: 20%;
-        height: 3rem;
+        width: 120%;
+        height: 50px;
         top: 0;
         left: 0;
         background-size: cover;

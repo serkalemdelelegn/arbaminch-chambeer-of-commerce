@@ -110,9 +110,10 @@ body{
 
 .header .logo img{
     width: 130%;
-    height: 3rem;
+    height: 80px;
     top: 0;
     left: 0;
+    border-radius: 50%;
 }
 
 .header .navbar ul{
@@ -150,8 +151,6 @@ body{
 .home{
     min-height: 100vh;
     width: 100vw;
-    background-image: url(../images/img1.jpg);
-    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -160,6 +159,8 @@ body{
     padding: 0 1rem;
     position: relative;
     overflow: hidden !important;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../images/imagehome.jpg);
+    background-size: cover;
 }
 
 .home h1{
@@ -1084,8 +1085,8 @@ body{
     }
 
     .header .logo img{
-        width: 20%;
-        height: 3rem;
+        width: 150%;
+        height: 50px;
         top: 0;
         left: 0;
         background-size: cover;
