@@ -110,10 +110,9 @@ body{
 
 .header .logo img{
     width: 130%;
-    height: 80px;
+    height: 10rem;
     top: 0;
     left: 0;
-    border-radius: 50%;
 }
 
 .header .navbar ul{
@@ -151,6 +150,8 @@ body{
 .home{
     min-height: 100vh;
     width: 100vw;
+    background-image: url(../images/paradaize.jpg);
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -159,18 +160,16 @@ body{
     padding: 0 1rem;
     position: relative;
     overflow: hidden !important;
-    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../images/imagehome.jpg);
-    background-size: cover;
 }
 
 .home h1{
-    color: #fff;
-    font-size: 5.5rem;
+    color: #0e2e10;
+    font-size: 6rem;
 }
 
 .home h2{
-    color: #fff;
-    font-size: 3rem;
+    color: #3d1e10;
+    font-size: 4rem;
 }
 
 .home .wave{
@@ -329,11 +328,17 @@ body{
   }   
 
 .counters {
-	background-image: url(../images/img2.jpg);
+    background:
+    linear-gradient(
+        to right,
+        rgb(0 0 0/ 0.75),
+        rgb(0 0 0/ 0.5) 
+    ),
+    url(../images/tesebsibew\ photo.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-	color: #fff;
+	color: #f8f2f2;
 	padding: 40px 20px;
 }
 
@@ -345,7 +350,7 @@ body{
 }
 
 .counters i {
-	color: #fff;
+	color: #f5ebeb;
 	margin-bottom: 5px;
 }
 
@@ -458,9 +463,15 @@ body{
   }
 
 .communicate{
+    background:
+    linear-gradient(
+        to right,
+        rgba(1, 49, 21, 0.5),
+        rgba(48, 1, 1, 0.5) 
+    ),
+    url(../images/images.jpeg);
     text-align: center;
     align-items: center;
-    background-image: url(../images/img3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -1085,8 +1096,8 @@ body{
     }
 
     .header .logo img{
-        width: 150%;
-        height: 50px;
+        width: 20%;
+        height: 3rem;
         top: 0;
         left: 0;
         background-size: cover;
