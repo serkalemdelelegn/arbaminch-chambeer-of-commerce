@@ -1,31 +1,35 @@
-<?php   
-    require("./mailing/mailfunction.php");
+<?php
+require("./path/to/database/connection/file.php"); // Database connection file
 
-    $name = $_POST["name"];
-    $phone = $_POST['phone'];
-    $email = $_POST["email"];
-    $applyfor = $_POST["status"];
-    $experience = $_POST["experience"];
-    $otherdetails = $_POST["details"];
+$title = $_POST["title"];
+$short_description = $_POST["short_description"];
+$long_description = $_POST["long_description"];
 
-    $filename = $_FILES["fileToUpload"]["name"];
-	$filetype = $_FILES["fileToUpload"]["type"];
-	$filesize = $_FILES["fileToUpload"]["size"];
-	$tempfile = $_FILES["fileToUpload"]["tmp_name"];
-	$filenameWithDirectory = "".$name.".pdf";  //give path of tmp-uploads folder(available in this project folder) with slash(/ or \ as per your path) at end of path
+$filename = $_FILES["image"]["name"];
+$filetype = $_FILES["image"]["type"];
+$tempfile = $_FILES["image"]["tmp_name"];
+$targetDirectory = "uploads/";
+$filenameWithDirectory = $targetDirectory . basename($filename);
 
-    $body = "<ul><li>Name: ".$name."</li><li>Phone: ".$phone."</li><li>Email: ".$email."</li><li>Apply For: ".$applyfor."</li><li>Experience: ".$experience." Yrs.</li><li>Resume(Attached Below):</li></ul>";
-	if(move_uploaded_file($tempfile, $filenameWithDirectory))
-	{
-		$status = mailfunction("", "Company", $body, $filenameWithDirectory); //reciever
-        if($status)
-            echo '<center><h1>Thanks! We will contact you soon.</h1></center>';
-        else
-            echo '<center><h1>Error sending message! Please try again.</h1></center>';
-	}
-	else 
-	{
-		echo "<center><h1>Error uploading file! Please try again.</h1></center>";
-	}
+// Validate the file type
+$allowedTypes = ['image/jpeg', 'image/png'];
+if (!in_array($filetype, $allowedTypes)) {
+    echo "<center><h1>Only JPEG and PNG files are allowed.</h1></center>";
+    exit;
+}
 
+// Attempt to move the uploaded file
+if (!move_uploaded_file($tempfile, $filenameWithDirectory)) {
+    echo "<center><h1>Error uploading image! Please try again.</h1></center>";
+    exit;
+}
+
+// Insert news into the database
+try {
+    $stmt = $pdo->prepare("INSERT INTO news (title, short_description, long_description, image_path) VALUES (?, ?, ?, ?)");
+    $stmt->execute([$title, $short_description, $long_description, $filenameWithDirectory]);
+    echo '<center><h1>News posted successfully!</h1></center>';
+} catch (PDOException $e) {
+    echo "<center><h1>Error: " . $e->getMessage() . "</h1></center>";
+}
 ?>
