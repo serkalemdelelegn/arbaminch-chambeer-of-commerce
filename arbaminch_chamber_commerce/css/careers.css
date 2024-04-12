@@ -188,6 +188,21 @@ body{
     -webkit-transition:all 0.5s ease 0s;
     transition:all 0.5s ease 0s;
   }
+
+  .event .icon{
+    font-size:20px;
+    color:blue;
+    border-radius: 50px;
+    padding: 5px;
+  }
+
+  .event:hover .event,
+  .event:hover span.icon{
+    background:#fff;
+    border-radius: 10px;
+    -webkit-transition:all 0.5s ease 0s;
+    transition:all 0.5s ease 0s;
+  }
   
   .event-details {
     flex: 1;
