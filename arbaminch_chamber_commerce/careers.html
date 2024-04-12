@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Company Website</title>
+    <title>Arbaminch City Chamber of commerce</title>
     <link rel="stylesheet" href="./css/careers.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-A6E/Ig6hPW1b4k5xHLQSTBmMTIiRce+gO8hPU3UD4mRjrDyjtPW7KrD9E6wVhK/dC2vzWWo/x8yjG6Aib2x9ng==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="icon" href="./images/image.png">
+    <link rel="icon" href="./images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -21,17 +22,17 @@
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo"><img src="./images/image.jpg" alt=""></a>
+        <a href="#" class="logo"><img src="./images/logo.png" alt=""></a>
         <p style="color: greenyellow; font-size: 20px;">የአርባ ምንጭ ከተማ የንግድ እና የዘርፍ ማህበራት ምክር ቤት</p>
         <div class="fas fa-bars"></div>
         <nav class="navbar">
             <ul>
                 <li><a href="index.html#home">home</a></li>
-                <li><a href="index.html#about">about</a></li>
+                <li><a href="about.html">about</a></li>
                 <li><a href="index.html#service">services</a></li>
-                <li><a href="index.html#portfolio">portfolio</a></li>
+                <li><a href="index.html#portfolio">membership</a></li>
                 <li><a href="index.html#team">team</a></li>
-                <li><a href="careers.html">career</a></li>
+                <li><a href="careers.html">events</a></li>
                 <li><a href="index.html#contact">contact</a></li>
                 <li><a href="index.html#faq">FAQ</a></li>
             </ul>
@@ -39,59 +40,129 @@
     </header>
 
     <section id="home" class="home">
-        <h2>Home / Careers</h2>
+        <h2>Home / Events</h2>
     </section>
-
     <section id="career-heading" class="career-heading">
-        <h1 class="heading">Career</h1>
-        <p>Job Opening in IT Company. Apply Now!</p>
-    </section>
-    <div class="career">
-        <div class="career-form">
-            <form action="./careers.php" method="POST" enctype="multipart/form-data">
-                <input type="text" name="name" placeholder="Name" class="career-form-txt" required>
-                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="Contact number" maxlength="10" class="career-form-phone">
-                <input type="email" name="email" placeholder="Email" class="career-form-email" required>
-                <div class="radio-class">
-                    <h2 class="name">Apply For Which Post?</h2>
-                <label class="radio">
-                  <input class="radio-one" type="radio" checked="checked" name="status" value="Web Designer">
-                  <span class="checkmark"></span>
-                  Web Designer
-                </label>
-                <label class="radio">
-                  <input class="radio-two" type="radio" name="status" value="Web Developer">
-                  <span class="checkmark"></span>
-                  Web Developer
-                </label>
-                <label class="radio">
-                  <input class="radio-three" type="radio" name="status" value="Mobile App Designer">
-                  <span class="checkmark"></span>
-                  Mobile App Designer
-                </label>
-                <label class="radio">
-                    <input class="radio-four" type="radio" name="status" value="Mobile App Developer">
-                    <span class="checkmark"></span>
-                    Mobile App Developer
-                  </label>
-                <label class="radio">
-                  <input class="radio-five" type="radio"  name="status" value="Digital Marketer">
-                  <span class="checkmark"></span>
-                  Digital Marketer
-                </label>
+        <h1 class="heading">Events</h1>
+        <section class="event-body">
+          <div class="event-card">
+            <div class="event">
+              <img class="event-image" src="./images/about.jpg" alt="Event Image">
+              <div class="event-details item">
+                <h2 class="event-title">Event Title</h2>
+                <p class="event-description">Event Description goes here... Event Description goes here... Event Description goes here... Event Description goes here...</p>
+                <p class="event-time"><span class="icon feature_box_col_one"><i class="fa fa-clock"></i></span> 10:00 AM</p>
+                <p class="event-date"><span class="icon feature_box_col_two"><i class="far fa-calendar-alt"></i></span> April 20, 2024</p>
+                <p class="event-place"><span class="icon feature_box_col_three"><i class="fa fa-map-marker-alt"></i></span> Venue Name, City</p>
+                <button class="learn-more-btn" onclick="showDetails(1)">Learn More</button>
+                <div class="event-popup" id="eventPopup1">
+                  <span class="close-btn" onclick="closePopup(1)">X</span>
+                  <img class="event-image" src="./images/about.jpg" alt="Event Image">
+                  <h2 class="event-title">Event Title</h2>
+                  <p class="event-description">Event Description goes here... Event Description goes here... Event Description goes here... Event Description goes here...</p>
+                  <p class="event-time"><span class="icon feature_box_col_one"><i class="fa fa-clock"></i></span> 10:00 AM</p>
+                  <p class="event-date"><span class="icon feature_box_col_two"><i class="far fa-calendar-alt"></i></span> April 20, 2024</p>
+                  <p class="event-place"><span class="icon feature_box_col_three"><i class="fa fa-map-marker-alt"></i></span> Venue Name, City</p>
                 </div>
-                <input type="number" id="experience" name="experience" required placeholder="Years of Experience" class="career-form-experience">
-                <textarea placeholder="Other Details" name="details" class="career-form-txtarea" required></textarea>
-                <div class="file">
-                    <h2 class="name">Upload Your Resume</h2>
-                    <input class="upload" type="file" name="fileToUpload" accept=".doc,.docx,.pdf"><br><br><br>
-                </div>
-                <input type="submit" value="Submit" name="submit" class="career-form-btn">
-            </form>
-        </div>
-    </div>
+              </div>
+            </div>
+          </div>
 
-      <div class="footer">
+          <div class="event-card">
+            <div class="event">
+              <img class="event-image" src="./images/about.jpg" alt="Event Image">
+              <div class="event-details item">
+                <h2 class="event-title">Event Title</h2>
+                <p class="event-description">Event Description goes here... Event Description goes here... Event Description goes here... Event Description goes here...</p>
+                <p class="event-time"><span class="icon feature_box_col_one"><i class="fa fa-clock"></i></span> 10:00 AM</p>
+                <p class="event-date"><span class="icon feature_box_col_two"><i class="far fa-calendar-alt"></i></span> April 20, 2024</p>
+                <p class="event-place"><span class="icon feature_box_col_three"><i class="fa fa-map-marker-alt"></i></span> Venue Name, City</p>
+                <button class="learn-more-btn" onclick="showDetails(1)">Learn More</button>
+                <div class="event-popup" id="eventPopup1">
+                  <span class="close-btn" onclick="closePopup(1)">X</span>
+                  <img class="event-image" src="./images/about.jpg" alt="Event Image">
+                  <h2 class="event-title">Event Title</h2>
+                  <p class="event-description">Event Description goes here... Event Description goes here... Event Description goes here... Event Description goes here...</p>
+                  <p class="event-time"><span class="icon feature_box_col_one"><i class="fa fa-clock"></i></span> 10:00 AM</p>
+                  <p class="event-date"><span class="icon feature_box_col_two"><i class="far fa-calendar-alt"></i></span> April 20, 2024</p>
+                  <p class="event-place"><span class="icon feature_box_col_three"><i class="fa fa-map-marker-alt"></i></span> Venue Name, City</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="event-card">
+            <div class="event">
+              <img class="event-image" src="./images/about.jpg" alt="Event Image">
+              <div class="event-details item">
+                <h2 class="event-title">Event Title</h2>
+                <p class="event-description">Event Description goes here... Event Description goes here... Event Description goes here... Event Description goes here...</p>
+                <p class="event-time"><span class="icon feature_box_col_one"><i class="fa fa-clock"></i></span> 10:00 AM</p>
+                <p class="event-date"><span class="icon feature_box_col_two"><i class="far fa-calendar-alt"></i></span> April 20, 2024</p>
+                <p class="event-place"><span class="icon feature_box_col_three"><i class="fa fa-map-marker-alt"></i></span> Venue Name, City</p>
+                <button class="learn-more-btn" onclick="showDetails(1)">Learn More</button>
+                <div class="event-popup" id="eventPopup1">
+                  <span class="close-btn" onclick="closePopup(1)">X</span>
+                  <img class="event-image" src="./images/about.jpg" alt="Event Image">
+                  <h2 class="event-title">Event Title</h2>
+                  <p class="event-description">Event Description goes here... Event Description goes here... Event Description goes here... Event Description goes here...</p>
+                  <p class="event-time"><span class="icon feature_box_col_one"><i class="fa fa-clock"></i></span> 10:00 AM</p>
+                  <p class="event-date"><span class="icon feature_box_col_two"><i class="far fa-calendar-alt"></i></span> April 20, 2024</p>
+                  <p class="event-place"><span class="icon feature_box_col_three"><i class="fa fa-map-marker-alt"></i></span> Venue Name, City</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="event-card">
+            <div class="event">
+              <img class="event-image" src="./images/about.jpg" alt="Event Image">
+              <div class="event-details item">
+                <h2 class="event-title">Event Title</h2>
+                <p class="event-description">Event Description goes here... Event Description goes here... Event Description goes here... Event Description goes here...</p>
+                <p class="event-time"><span class="icon feature_box_col_one"><i class="fa fa-clock"></i></span> 10:00 AM</p>
+                <p class="event-date"><span class="icon feature_box_col_two"><i class="far fa-calendar-alt"></i></span> April 20, 2024</p>
+                <p class="event-place"><span class="icon feature_box_col_three"><i class="fa fa-map-marker-alt"></i></span> Venue Name, City</p>
+                <button class="learn-more-btn" onclick="showDetails(1)">Learn More</button>
+                <div class="event-popup" id="eventPopup1">
+                  <span class="close-btn" onclick="closePopup(1)">X</span>
+                  <img class="event-image" src="./images/about.jpg" alt="Event Image">
+                  <h2 class="event-title">Event Title</h2>
+                  <p class="event-description">Event Description goes here... Event Description goes here... Event Description goes here... Event Description goes here...</p>
+                  <p class="event-time"><span class="icon feature_box_col_one"><i class="fa fa-clock"></i></span> 10:00 AM</p>
+                  <p class="event-date"><span class="icon feature_box_col_two"><i class="far fa-calendar-alt"></i></span> April 20, 2024</p>
+                  <p class="event-place"><span class="icon feature_box_col_three"><i class="fa fa-map-marker-alt"></i></span> Venue Name, City</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="event-card">
+            <div class="event">
+              <img class="event-image" src="./images/about.jpg" alt="Event Image">
+              <div class="event-details item">
+                <h2 class="event-title">Event Title</h2>
+                <p class="event-description">Event Description goes here... Event Description goes here... Event Description goes here... Event Description goes here...</p>
+                <p class="event-time"><span class="icon feature_box_col_one"><i class="fa fa-clock"></i></span> 10:00 AM</p>
+                <p class="event-date"><span class="icon feature_box_col_two"><i class="far fa-calendar-alt"></i></span> April 20, 2024</p>
+                <p class="event-place"><span class="icon feature_box_col_three"><i class="fa fa-map-marker-alt"></i></span> Venue Name, City</p>
+                <button class="learn-more-btn" onclick="showDetails(1)">Learn More</button>
+                <div class="event-popup" id="eventPopup1">
+                  <span class="close-btn" onclick="closePopup(1)">X</span>
+                  <img class="event-image" src="./images/about.jpg" alt="Event Image">
+                  <h2 class="event-title">Event Title</h2>
+                  <p class="event-description">Event Description goes here... Event Description goes here... Event Description goes here... Event Description goes here...</p>
+                  <p class="event-time"><span class="icon feature_box_col_one"><i class="fa fa-clock"></i></span> 10:00 AM</p>
+                  <p class="event-date"><span class="icon feature_box_col_two"><i class="far fa-calendar-alt"></i></span> April 20, 2024</p>
+                  <p class="event-place"><span class="icon feature_box_col_three"><i class="fa fa-map-marker-alt"></i></span> Venue Name, City</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    </section>
+      
+    <div class="footer">
         <div class="footer-top">
             <div class="container">
                 <div class="row">
@@ -99,34 +170,34 @@
                         <h4>About Us</h4>
                         <ul>
                             <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#home">Home</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#about">About us</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="about.html">About us</a></li>
                             <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#service">Our services</a></li>
                             <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#home">Terms & condition</a></li>
                             <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#home">Privacy policy</a></li>
                         </ul>
                     </div>
-  
+
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Useful Links</h4>
                         <ul>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#portfolio">Portfolio</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#portfolio">Membership</a></li>
                             <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#team">Team</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="careers.html">Career</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="careers.html">Events</a></li>
                             <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#contact">Contact</a></li>
                             <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#faq">FAQ</a></li>
                         </ul>
                     </div>
-  
+
                     <div class="col-lg-3 col-md-6 footer-contact" style="font-size: 1.5rem;">
                         <h4>Contact Us</h4>
                         <p>
-                            1300  Center Avenue<br>
-                            Fresno, California<br>
-                            United States <br>
-                            <strong>Phone:</strong> +123-456-7890<br>
-                            <strong>Email:</strong> info@example.com<br>
+                            South Ethiopia<br>
+                            Arbaminch, Secha<br>
+                            Ethiopia <br>
+                            <strong>Phone:</strong> +251-930-116-677<br>
+                            <strong>Email: </strong>bogale.bente11@gmail.com<br>
                         </p>
-  
+
                         <div class="social-links">
                             <a href="https://www.facebook.com/"><i class="ion-logo-facebook"></i></a>
                             <a href="https://twitter.com/login?lang=en"><i class="ion-logo-twitter"></i></a>
@@ -134,25 +205,25 @@
                             <a href="https://www.instagram.com/"><i class="ion-logo-instagram"></i></a>
                             <a href="https://accounts.google.com/servicelogin/signinchooser?flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i class="ion-logo-googleplus"></i></a>
                         </div>
-  
+
                     </div>
-  
+
                     <div class="col-lg-3 col-md-6 footer-newsletter">
                         <h4>Subscription</h4>
-                        <p>With Our Skills Put Together, You Get An Ensemble Capable Of Doing Anything And Everything Your Brand Needs. Subscribe Here To Get Our Latest Updates.</p>
+                        <p></p>
                         <form action="" method="post">
                             <input type="email" name="email"><input type="submit"  value="Subscribe">
                         </form>
                     </div>
-  
+
                 </div>
             </div>
         </div>
-  
+
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 copyright" style="color: #fff; font-size: 1.3rem;">
-                    Copyright &copy; 2021 IT Company Website. All Rights Reserved.
+                    Copyright &copy; 2021 Arbaminch Chamber of Commerce. All Rights Reserved.
                 </div>
             </div>
         </div>
@@ -168,6 +239,16 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <script>
+        function showDetails(id) {
+          document.getElementById("eventPopup" + id).style.display = "block";
+        }
+
+        function closePopup(id) {
+          document.getElementById("eventPopup" + id).style.display = "none";
+        }
+    </script>
 
 </body>
 </html>

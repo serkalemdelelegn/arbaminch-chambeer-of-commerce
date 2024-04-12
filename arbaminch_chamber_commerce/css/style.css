@@ -110,7 +110,7 @@ body{
 
 .header .logo img{
     width: 130%;
-    height: 10rem;
+    height: 6rem;
     top: 0;
     left: 0;
 }
@@ -1090,14 +1090,14 @@ body{
     }
 }        
 
-@media (max-width: 1000px){
+@media (max-width: 1150px){
     html{
         font-size: 50%;
     }
 
     .header .logo img{
-        width: 20%;
-        height: 3rem;
+        width: 80px;
+        height: 5rem;
         top: 0;
         left: 0;
         background-size: cover;
